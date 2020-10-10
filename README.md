@@ -16,14 +16,14 @@ for a given dictionary ![equation](http://www.sciweavers.org/upload/Tex2Img_1602
 ## Usage
 
 1. Import the solver and data-generation methods
-```
+```{python}
 import numpy as np
 from actset.dictionary import sample_data, sample_sparse_vector
 from actset.actset import actset
 ```
 
 2. Set problem parameters
-```
+```{python}
 m = 100           # Number of lines of A
 n = 200           # Number of columns of A
 gen = 'uniform'   # Generation method for A
@@ -34,7 +34,7 @@ maxop = int(1e9)  # Maximum number of operation (multiplications) allowed
 ```
 
 3. Generate data
-```
+```{python}
 k = int(n/3)
 sparse_vector = sample_sparse_vector(n, k)        # k-sparse vector used to generate A and y
 A, y = sample_data(m, n, gen, sparse_vector)      # Data generation
@@ -43,6 +43,6 @@ x0 = np.zeros(n)                                  # Initial point for the Active
 ```
 
 4. Solve the problem
-```
+```{python}
 x_actset, mnt_actset = actset(x0, A, y, reg, prec, maxit, maxop)
 ```
