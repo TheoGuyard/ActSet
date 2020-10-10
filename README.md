@@ -1,2 +1,2 @@
 # ActSet
-Active-Set solver for the Non-negative LASSO problem.
+Active-Set solver for the non-negative LASSO problem.
