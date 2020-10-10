@@ -5,7 +5,7 @@ Active-Set solver for the non-negative LASSO problem.
 
 The non-negative LASSO is a famous convex problem finding applications in various fields. It can be expressed as
 
-![equation](http://www.sciweavers.org/upload/Tex2Img_1602350638/render.png}
+![equation](http://www.sciweavers.org/upload/Tex2Img_1602350638/render.png)
 
 for a given dictionary $\mathbf{A} \in \mathbb{R}^{m \times n}$, a given observation vector $\mathbf{y} \in \mathbb{R}^m$ and a given regularization parameter $\lambda \geq 0$. It seeks for a sparse vector $\mathbf{x}^{\star}$ approximating $\mathbf{y}$ through the coefficients of $\mathbf{A}$. The larger $\lambda$, the sparser $\mathbf{x}^{\star}$. Many algorithms can tackle this problem very efficiently. Bests known are FISTA [1] and ADMM [2]. However, they face their limits in some cases. When the dimension of $\mathbf{A}$ is too large, iterations can be costly to handle. Furthermore, algorithms usually struggle to converge when a high accuracy is required. Recently, screening tests [2] were developed to face the dimension issue by reducing iteratively the size of the problem during the resolution process. In this paper, we introduce new screening tests to tackle the non-negative LASSO when a high accuracy is required which allow to bypass the last iterations where methods are usually slow to converge.
 
