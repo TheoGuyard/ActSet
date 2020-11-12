@@ -3,11 +3,7 @@ Active-Set solver for the non-negative LASSO problem.
 
 ## Non-negative LASSO
 
-The non-negative LASSO is a famous convex problem finding applications in various fields. It can be expressed as
-
-![equation](http://www.sciweavers.org/upload/Tex2Img_1602351556/render.png)
-
-for a given dictionary ![equation](http://www.sciweavers.org/upload/Tex2Img_1602351348/render.png), a given observation vector ![equation](http://www.sciweavers.org/upload/Tex2Img_1602351368/render.png) and a given regularization parameter ![equation](http://www.sciweavers.org/upload/Tex2Img_1602351404/render.png). It seeks for a sparse vector ![equation](http://www.sciweavers.org/upload/Tex2Img_1602351217/render.png) approximating ![equation](http://www.sciweavers.org/upload/Tex2Img_1602351258/render.png) through the coefficients of ![equation](http://www.sciweavers.org/upload/Tex2Img_1602351298/render.png). The larger ![equation](http://www.sciweavers.org/upload/Tex2Img_1602351429/render.png), the sparser ![equation](http://www.sciweavers.org/upload/Tex2Img_1602351217/render.png). Many algorithms can tackle this problem very efficiently. Bests known are FISTA [1] and ADMM [2]. However, they face their limits in some cases. When the dimension of ![equation](http://www.sciweavers.org/upload/Tex2Img_1602351298/render.png) is too large, iterations can be costly to handle. Furthermore, algorithms usually struggle to converge when a high accuracy is required. The Active-set method [3] seems to handle pretty well the problem in such cases.
+The non-negative LASSO is a famous convex problem finding applications in various fields. Starting from a given vector **y** and a given matrix **A**, it seeks for a sparse vector **x** such that **Ax** well approximates **y**. Many algorithms can tackle this problem very efficiently. Bests known are FISTA [1] and ADMM [2]. However, they face their limits in some cases. When the dimension of **y** is too large, iterations can be costly to handle. Furthermore, algorithms usually struggle to converge when a high accuracy is required. The Active-set method [3] seems to handle pretty well the problem in such cases.
 
 [1] Beck, A., & Teboulle, M. (2009, April). A fast iterative shrinkage-thresholding algorithm with application to wavelet-based image deblurring. In 2009 IEEE International Conference on Acoustics, Speech and Signal Processing (pp. 693-696). IEEE.
 
